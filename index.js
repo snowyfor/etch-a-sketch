@@ -15,6 +15,11 @@ resetBtn.addEventListener("click", function() {
     }
 });
 
+function randomInteger(max) {
+    // return a number between 0 and max inclusive
+    return Math.floor(Math.random()*(max + 1));
+}
+
 function createGrid(n) {
     for(let i = 0; i < n; i++) {
         for(let j = 0; j < n; j++) {
@@ -24,8 +29,13 @@ function createGrid(n) {
             square.classList.add("square");
             container.appendChild(square);
     
-            square.addEventListener("mousemove", function() {
-                square.style.backgroundColor = "aquamarine";
+            square.addEventListener("mouseenter", function() {
+                // random rgb generator
+                let r = randomInteger(255);
+                let g = randomInteger(255);
+                let b = randomInteger(255);
+                //random square color
+                square.style.backgroundColor = `rgb(${r},${g},${b})`;
             });
         }
     }
