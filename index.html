@@ -16,13 +16,14 @@
             height: 100vh;
 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
         .container {
-            width: calc(25px * 16);
-            height: calc(25px * 16);
+            width: 400px;
+            height: 400px;
 
             display: flex;
             flex-flow: row wrap;
@@ -36,6 +37,7 @@
     </style>
 </head>
 <body>
+    <button id="reset">Reset</button>
     <div class="container"></div>
 
     <script src="index.js"></script>
