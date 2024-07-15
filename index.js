@@ -24,8 +24,8 @@ function createGrid(n) {
     for(let i = 0; i < n; i++) {
         for(let j = 0; j < n; j++) {
             const square = document.createElement("div");
-            square.style.width = `calc(496px / ${n})`;
-            square.style.height = `calc(496px / ${n})`;
+            square.style.width = `calc(560px / ${n})`;
+            square.style.height = `calc(560px / ${n})`;
             square.classList.add("square");
             container.appendChild(square);
     
